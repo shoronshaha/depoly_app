@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { userLoggedIn } from "../auth/authSlice";
+import { userLoggedIn } from "../features/auth/authSlice";
 
 export default function useAuthCheck() {
   const dispatch = useDispatch();
