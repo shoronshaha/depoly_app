@@ -1,6 +1,6 @@
 import gravatarUrl from "gravatar-url";
 import moment from "moment";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -17,10 +17,22 @@ export default function ChatItems() {
   const { email } = user || {};
   const { data, isLoading, isError, error } =
     useGetConversationsQuery(email) || {};
-  const { data: conversations, totalCount } = data || {};
+  const { data: conversations = [], totalCount } = data || {};
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const dispatch = useDispatch();
+
+  // Avoid duplicate conversations by memoizing and filtering
+  const uniqueConversations = useMemo(() => {
+    const seen = new Set();
+    return conversations.filter((conversation) => {
+      if (seen.has(conversation.id)) {
+        return false;
+      }
+      seen.add(conversation.id);
+      return true;
+    });
+  }, [conversations]);
 
   const fetchMore = () => {
     setPage((prevPage) => prevPage + 1);
@@ -48,7 +60,7 @@ export default function ChatItems() {
     }
   }, [totalCount, page]);
 
-  // decide what to render
+  // Render logic
   let content = null;
 
   if (isLoading) {
@@ -59,18 +71,18 @@ export default function ChatItems() {
         <Error message={error?.data} />
       </li>
     );
-  } else if (!isLoading && !isError && conversations?.length === 0) {
+  } else if (!isLoading && !isError && uniqueConversations.length === 0) {
     content = <li className="m-2 text-center">No conversations found!</li>;
-  } else if (!isLoading && !isError && conversations?.length > 0) {
+  } else if (!isLoading && !isError && uniqueConversations.length > 0) {
     content = (
       <InfiniteScroll
-        dataLength={conversations.length}
+        dataLength={uniqueConversations.length}
         next={fetchMore}
         hasMore={hasMore}
         loader={<h4>Loading...</h4>}
         height={window.innerHeight - 129}
       >
-        {conversations.map((conversation) => {
+        {uniqueConversations.map((conversation) => {
           const { id, message, timestamp } = conversation;
           const { email } = user || {};
           const { name, email: partnerEmail } = getPartnerInfo(
