@@ -21,7 +21,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
         { updateCachedData, cacheDataLoaded, cacheEntryRemoved }
       ) {
         // create socket
-        const socket = io("http://localhost:9000", {
+        const socket = io(`${import.meta.env.VITE_APP_API_URL}`, {
           reconnectionDelay: 1000,
           reconnection: true,
           reconnectionAttempts: 10,

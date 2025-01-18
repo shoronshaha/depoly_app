@@ -143,6 +143,18 @@
       "password": "$2a$10$dYIRoT0lbxDNY.KBmn8CTuOaXaTRm90UU9UXB7UhWbSb4nSFkGeTq",
       "name": "somitro",
       "id": 24
+    },
+    {
+      "email": "user1@gmail.com",
+      "password": "$2a$10$QAIIt4WX485mSHu7Yw/apu0TyNNp3uepW98oPb9Fh5S7ZFTDfccme",
+      "name": "user1",
+      "id": 25
+    },
+    {
+      "email": "user2@gmail.com",
+      "password": "$2a$10$YrBXK4HEI0tCucMje8d2lOZtLaXKJtcRyY2v/YV5Yp5cLmPrNJhoy",
+      "name": "user2",
+      "id": 26
     }
   ],
   "conversations": [
@@ -542,6 +554,62 @@
       "message": "ddddsdf",
       "timestamp": 1736745931986,
       "id": 21
+    },
+    {
+      "participants": "user1@gmail.com-user2@gmail.com",
+      "users": [
+        {
+          "email": "user1@gmail.com",
+          "name": "user1",
+          "id": 25
+        },
+        {
+          "email": "user2@gmail.com",
+          "name": "user2",
+          "id": 26
+        }
+      ],
+      "message": "b",
+      "timestamp": 1737184845147,
+      "id": 22
+    },
+    {
+      "participants": "user2@gmail.com-test3@gmail.com",
+      "users": [
+        {
+          "email": "user2@gmail.com",
+          "name": "user2",
+          "id": 26
+        },
+        {
+          "email": "test3@gmail.com",
+          "password": "$2a$10$.Yw4t3v3IwR3dPm4rvAskOHwK1Clu7sLY.i.hxPRztsUF4U9fYN4S",
+          "name": "Test 3",
+          "id": 6
+        }
+      ],
+      "message": "dd",
+      "timestamp": 1737184834435,
+      "id": 23
+    },
+    {
+      "participants": "user1@gmail.com-test3@gmail.com",
+      "users": [
+        {
+          "email": "user1@gmail.com",
+          "name": "user1",
+          "id": 25
+        },
+        {
+          "email": "test3@gmail.com",
+          "password": "$2a$10$.Yw4t3v3IwR3dPm4rvAskOHwK1Clu7sLY.i.hxPRztsUF4U9fYN4S",
+          "name": "Test 3",
+          "id": 6
+        }
+      ],
+      "message": "sdfaf",
+      "timestamp": 1737184840165,
+      "id": 24
     }
   ],
   "messages": [
@@ -2933,6 +3001,169 @@
       "message": "ddddsdf",
       "timestamp": 1736745931986,
       "id": 146
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "receiver": {
+        "email": "user1@gmail.com",
+        "password": "$2a$10$QAIIt4WX485mSHu7Yw/apu0TyNNp3uepW98oPb9Fh5S7ZFTDfccme",
+        "name": "user1",
+        "id": 25
+      },
+      "message": "fff",
+      "timestamp": 1737184756932,
+      "id": 147
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "receiver": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "message": "fffff",
+      "timestamp": 1737184767700,
+      "id": 148
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "receiver": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "message": "fffff",
+      "timestamp": 1737184767715,
+      "id": 149
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "receiver": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "message": "f",
+      "timestamp": 1737184781467,
+      "id": 150
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "receiver": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "message": "sss",
+      "timestamp": 1737184787068,
+      "id": 151
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "receiver": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "message": "dsfsad",
+      "timestamp": 1737184792715,
+      "id": 152
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "receiver": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "message": "ddd",
+      "timestamp": 1737184800556,
+      "id": 153
+    },
+    {
+      "conversationId": 23,
+      "sender": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "receiver": {
+        "email": "test3@gmail.com",
+        "password": "$2a$10$.Yw4t3v3IwR3dPm4rvAskOHwK1Clu7sLY.i.hxPRztsUF4U9fYN4S",
+        "name": "Test 3",
+        "id": 6
+      },
+      "message": "dd",
+      "timestamp": 1737184834435,
+      "id": 154
+    },
+    {
+      "conversationId": 24,
+      "sender": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "receiver": {
+        "email": "test3@gmail.com",
+        "password": "$2a$10$.Yw4t3v3IwR3dPm4rvAskOHwK1Clu7sLY.i.hxPRztsUF4U9fYN4S",
+        "name": "Test 3",
+        "id": 6
+      },
+      "message": "sdfaf",
+      "timestamp": 1737184840165,
+      "id": 155
+    },
+    {
+      "conversationId": 22,
+      "sender": {
+        "email": "user1@gmail.com",
+        "name": "user1",
+        "id": 25
+      },
+      "receiver": {
+        "email": "user2@gmail.com",
+        "name": "user2",
+        "id": 26
+      },
+      "message": "b",
+      "timestamp": 1737184845147,
+      "id": 156
     }
   ]
 }

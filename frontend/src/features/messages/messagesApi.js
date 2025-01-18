@@ -11,7 +11,7 @@ export const messagesApi = apiSlice.injectEndpoints({
         arg,
         { updateCachedData, cacheDataLoaded, cacheEntryRemoved }
       ) {
-        const socket = io("http://localhost:9000", {
+        const socket = io(`${import.meta.env.VITE_APP_API_URL}`, {
           reconnectionDelay: 1000,
           reconnection: true,
           transports: ["websocket"],
